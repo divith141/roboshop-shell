@@ -3,7 +3,7 @@ dnf install golang -y
 useradd roboshop
 rm -rf /app
 mkdir /app
-curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch-v3.zip
+curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip
 cd /app
 unzip /tmp/dispatch.zip
 cd /app
@@ -12,4 +12,4 @@ go get
 go build
 systemctl daemon-reload
 systemctl enable dispatch
-systemctl restart dispatch
+systemctl start dispatch
