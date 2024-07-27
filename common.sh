@@ -100,7 +100,6 @@ JAVA() {
   SYSTEMD_SETUP
 
 }
-
 SCHEMA_SETUP() {
   if [ "$schema_setup" == "mongo" ]; then
     PRINT COpy MongoDB repo file
